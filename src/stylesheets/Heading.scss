@@ -1,0 +1,32 @@
+.heading {
+    .pokemon {
+        overflow: hidden;
+
+        h1 {
+            position: absolute;
+            z-index: 100;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+                sans-serif;
+        }
+
+        .background {
+            height: 100vh;
+            width: 7680px;
+
+            background-image: url('../assets/background.jpg');
+            background-repeat: repeat-x;
+            background-position: center;
+            animation: slide 30s linear infinite;
+        }
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-3840px, 0, 0);
+    }
+}
