@@ -1,7 +1,7 @@
 <template>
 <!-- Heading -->
 <Heading/>
-<Work/>
+<!-- <Work/> -->
 <!-- UC -->
 <!-- Projects -->
 </template>

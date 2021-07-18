@@ -1,3 +1,5 @@
+@import './pixelHelpers.scss';
+
 $lightnavy: #3a4a7b;
 $navy: #293a63;
 $darknavy: #10213a;
@@ -13,38 +15,11 @@ $darkflesh: #de9473;
 $lightred: #ff635a;
 $darkred: #c54242;
 
-@function boxLocation($x, $y, $color) {
-    $pixSize: 8px;
-
-    $resultx: $pixSize * $x;
-    $resulty: $pixSize * $y;
-
-    @return $resultx $resulty $color;
-}
-
-@function boxShadowGen($image) {
-    $x: 0;
-    $y: 0;
-    $output: ();
-
-    @each $line in $image {
-        @each $pixel in $line {
-            @if $pixel != null {
-                $output: append($output, boxLocation($x, $y, $pixel), comma);
-            }
-            $x: $x + 1;
-        }
-        $y: $y + 1;
-        $x: 0;
-    }
-    @return $output;
-}
-
 #Brendan {
     width: 112px;
     height: 176px;
     position: absolute;
-    right: 50%;
+    right: 55%;
     bottom: 10%;
 
     &:after {

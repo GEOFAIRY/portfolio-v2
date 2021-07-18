@@ -3,8 +3,8 @@
         <div class="pokemon">
             <h1>Site under construction...</h1>
             <div class="background"></div>
-            <!-- <div id="May"></div> -->
-            <div id="Brendan" :class="brendanClass"></div>
+            <div id="May" :class="walkClass"></div>
+            <div id="Brendan" :class="walkClass"></div>
         </div>
     </div>
 </template>
@@ -16,15 +16,15 @@ export default defineComponent({
     name: 'Heading',
     data() {
         return {
-            brendanClass: '',
-            brendanFrame: 0,
+            walkClass: 'frame3',
+            walkFrame: 0,
         }
     },
     mounted() {
         setInterval(() => {
-            this.brendanFrame = (this.brendanFrame + 1) % 4
+            this.walkFrame = (this.walkFrame + 1) % 4
             var frameArr = ['', 'frame2', '', 'frame3']
-            this.brendanClass = frameArr[this.brendanFrame]
+            this.walkClass = frameArr[this.walkFrame]
         }, 150)
     },
 })
@@ -33,4 +33,5 @@ export default defineComponent({
 <style lang="scss">
 @import '../stylesheets/Heading.scss';
 @import '../stylesheets/Brendan.scss';
+@import '../stylesheets/May.scss';
 </style>

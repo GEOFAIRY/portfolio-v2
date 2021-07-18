@@ -1,0 +1,109 @@
+@import './pixelHelpers.scss';
+
+$maroon: #4A3139;
+$lightbrown: #A46A52;
+$darkbrown: #7B5A52;
+$green: #41AC20;
+$lime: #6AD541;
+$offwhite: #CDCDDE;
+$white: #FFFFFF;
+$black: #000000;
+$grey: #626273;
+$flesh: #DEA494;
+$lightflesh: #FFDECD;
+$darkflesh: #CD8373;
+$navy: #293941;
+$red: #C54141;
+$lightred: #FF625A;
+
+#May {
+    width: 112px;
+    height: 176px;
+    position: absolute;
+    right: 45%;
+    bottom: 10%;
+
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        content: '';
+        transform: translateY(0px);
+        box-shadow: boxShadowGen((
+            (null, null, null, $maroon, $maroon, $maroon),
+            (null, $maroon, $maroon, $maroon, $green, $green, $maroon, $grey, $grey, $maroon),
+            ($maroon, $green, $green, $green, $maroon, $offwhite, $lime, $lime, $lime, $lime, $grey, $maroon),
+            (null, $maroon, $green, $maroon, $offwhite, $offwhite, $white, $offwhite, $offwhite, $lime, $lime, $offwhite, $maroon),
+            (null, null, $maroon, $black, $maroon, $offwhite, $white, $white, $white, $white, $offwhite, $maroon, $lightbrown, $maroon),
+            (null, null, $black, $lightbrown, $lightbrown, $darkbrown, $darkbrown, $darkbrown, $darkbrown, $darkbrown, $maroon, $lightbrown, $lightbrown, $maroon),
+            (null, null, $black, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $maroon, $maroon, $lightbrown, $lightbrown),
+            (null, null, $black, $lightbrown, $flesh, $lightbrown, $flesh, $lightbrown, $lightbrown, $maroon, $lightflesh, $lightflesh, $maroon, $darkbrown),
+            (null, null, $black, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $maroon, $flesh, $maroon, $lightflesh, $lightflesh, $darkbrown),
+            (null, null, null, $black, $darkbrown, $lightbrown, $lightbrown, $darkbrown, $maroon, $flesh, $maroon, $lightflesh, $lightflesh,$darkbrown),
+            (null, null, null, $black, $darkbrown, $darkbrown, $darkbrown, $maroon, $darkflesh, $darkflesh, $darkflesh, $darkflesh, $darkbrown),
+            (null, null, null, null, $maroon, $darkbrown, $darkbrown, $maroon, $maroon, $darkflesh, $darkbrown,$darkbrown),
+            (null, null, null, null, null, $maroon, $maroon, $maroon, $maroon, $navy, $navy),
+            (null, null, null, null, null, null, $maroon, $black, $black, $navy, $red, $maroon),
+            (null, null, null, null, $black, $black, $black, $white, $white, $black, $navy, $maroon),
+            (null, null, null, $black,$lime, $navy, $black, $offwhite, $offwhite, $black, $red, $black),
+            (null, null, null, $black, $green, $green, $offwhite, $black, $black, $offwhite, $black),
+            (null, null, null, null, $black, $black, $navy, $navy, $navy, $navy, $black),
+            (null, null, null, null, null, $black, $darkbrown, $green, $maroon, $red, $red, $black),
+            (null, null, null, null, null, null, $black, $black, $black, $black, $black)
+        ));
+    }
+
+    &.frame2:after {
+        transform: translateY(8px);
+        box-shadow: boxShadowGen((
+            (null, null, null, $maroon, $maroon, $maroon),
+            (null, $maroon, $maroon, $maroon, $green, $green, $maroon, $grey, $grey, $maroon),
+            ($maroon, $green, $green, $green, $maroon, $offwhite, $lime, $lime, $lime, $green, $grey, $maroon),
+            (null, $maroon, $green, $maroon, $offwhite, $offwhite, $white, $white, $offwhite, $lime, $lime, $offwhite, $maroon),
+            (null, null, $maroon, $black, $maroon, $grey, $offwhite, $white, $white, $white, $offwhite, $maroon, $lightbrown, $maroon),
+            (null, null, $black, $lightbrown, $lightbrown, $darkbrown, $darkbrown, $darkbrown, $darkbrown, $darkbrown, $maroon, $lightbrown, $lightbrown, $maroon),
+            (null, null, $black, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $maroon, $maroon, $lightbrown, $lightbrown),
+            (null, null, $black, $lightbrown, $flesh, $lightbrown, $flesh, $lightbrown, $lightbrown, $maroon, $lightflesh, $lightflesh, $maroon, $darkbrown),
+            (null, null, $black, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $maroon, $flesh, $maroon, $lightflesh, $lightflesh, $darkbrown),
+            (null, null, null, $black, $darkbrown, $lightbrown, $lightbrown, $darkbrown, $maroon, $flesh, $maroon, $lightflesh, $lightflesh,$darkbrown),
+            (null, null, null, $black, $darkbrown, $darkbrown, $darkbrown, $maroon, $darkflesh, $darkflesh, $darkflesh, $darkflesh, $darkbrown),
+            (null, null, null, null, $maroon, $darkbrown, $darkbrown, $maroon, $maroon, $darkflesh, $darkbrown,$darkbrown),
+            (null, null, null, null, null, $maroon, $maroon, $maroon, $maroon, $navy, $navy),
+            (null, null, null, null, null, $maroon, $black, $black, $flesh, $navy, $red, $maroon),
+            (null, null, null, null, $black, $black, $white, $white, $black, $red, $navy, $maroon),
+            (null, null, null, $black,$lime, $black, $offwhite, $offwhite, $black, $maroon, $red, $black, $black),
+            (null, null, $black, $black, $green, $green, $black, $black, $maroon, $red, $black, $navy, $lightred, $black),
+            (null, null, $black, $maroon, $black, $black, $navy, $navy, $navy, $navy, $black, $green, $lightred, $black),
+            (null, null, null, $black, $black, $black, null, null, null, $black, $red, $red, $black),
+            (null, null, null, null, null, null, null, null, null, null, $black, $black)
+        ));
+    }
+
+    &.frame3:after {
+        transform: translateY(8px);
+        box-shadow: boxShadowGen((
+            (null, null, null, $maroon, $maroon, $maroon),
+            (null, $maroon, $maroon, $maroon, $green, $green, $maroon, $grey, $grey, $maroon),
+            ($maroon, $green, $green, $green, $maroon, $offwhite, $lime, $lime, $lime, $green, $grey, $maroon),
+            (null, $maroon, $green, $maroon, $offwhite, $offwhite, $white, $white, $offwhite, $lime, $lime, $offwhite, $maroon),
+            (null, null, $maroon, $black, $maroon, $grey, $offwhite, $white, $white, $white, $offwhite, $maroon, $lightbrown, $maroon),
+            (null, null, $black, $lightbrown, $lightbrown, $darkbrown, $darkbrown, $darkbrown, $darkbrown, $darkbrown, $maroon, $lightbrown, $lightbrown, $maroon),
+            (null, null, $black, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $maroon, $maroon, $lightbrown, $lightbrown),
+            (null, null, $black, $lightbrown, $flesh, $lightbrown, $flesh, $lightbrown, $lightbrown, $maroon, $lightflesh, $lightflesh, $maroon, $darkbrown),
+            (null, null, $black, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $lightbrown, $maroon, $flesh, $maroon, $lightflesh, $lightflesh, $darkbrown),
+            (null, null, null, $black, $darkbrown, $lightbrown, $lightbrown, $darkbrown, $maroon, $flesh, $maroon, $lightflesh, $lightflesh,$darkbrown),
+            (null, null, null, $black, $darkbrown, $darkbrown, $darkbrown, $maroon, $darkflesh, $darkflesh, $darkflesh, $darkflesh, $darkbrown),
+            (null, null, null, null, $maroon, $darkbrown, $darkbrown, $maroon, $maroon, $darkflesh, $darkbrown,$darkbrown),
+            (null, null, null, null, null, $maroon, $maroon, $maroon, $maroon, $navy, $navy),
+            (null, null, null, null, null, null, $maroon, $navy, $flesh, $black, $black, $red),
+            (null, null, null, null, $black, $black, $black, $red, $black, $white, $white, $black, $black),
+            (null, null, null, $black,$lime, $navy, $black, $red, $black, $offwhite, $offwhite, $black, $red, $black),
+            (null, null, null, $black, $green, $green, $red, $maroon, $maroon, $black, $black, $red, $maroon, $black),
+            (null, null, $black, $red, $black, $black, $navy, $navy, $navy, $navy, $maroon, $maroon, $black),
+            (null, null, null, $black, $lightred, $lightred, $black, null, null, null, $black, $black),
+            (null, null, null, null, $black, $black)
+        ));
+    }
+}

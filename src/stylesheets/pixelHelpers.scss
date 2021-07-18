@@ -1,0 +1,26 @@
+@function boxLocation($x, $y, $color) {
+    $pixSize: 8px;
+
+    $resultx: $pixSize * $x;
+    $resulty: $pixSize * $y;
+
+    @return $resultx $resulty $color;
+}
+
+@function boxShadowGen($image) {
+    $x: 0;
+    $y: 0;
+    $output: ();
+
+    @each $line in $image {
+        @each $pixel in $line {
+            @if $pixel != null {
+                $output: append($output, boxLocation($x, $y, $pixel), comma);
+            }
+            $x: $x + 1;
+        }
+        $y: $y + 1;
+        $x: 0;
+    }
+    @return $output;
+}
