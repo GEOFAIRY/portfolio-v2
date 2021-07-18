@@ -16,7 +16,7 @@ export default defineComponent({
     name: 'Heading',
     data() {
         return {
-            walkClass: 'frame3',
+            walkClass: '',
             walkFrame: 0,
         }
     },
