@@ -1,19 +1,21 @@
 <template>
 <!-- Heading -->
 <Heading/>
-<!-- Arlo -->
+<Work/>
 <!-- UC -->
 <!-- Projects -->
 </template>
 
 <script lang="ts">
 import Heading from './Heading.vue'
+import Work from './Work.vue'
 import { defineComponent } from "@vue/runtime-core";
 
 export default defineComponent({
     name: 'Portfolio',
     components: {
-        Heading
+        Heading,
+        Work
     }
 })
 </script>
