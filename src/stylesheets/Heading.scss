@@ -12,21 +12,30 @@
 
         .background {
             height: 100vh;
-            width: 7680px;
-
-            background-image: url('../assets/background.jpg');
-            background-repeat: repeat-x;
-            background-position: center;
+            position: relative;
             animation: slide 30s linear infinite;
+
+            &::after {
+                content: '';
+                height: 100%;
+                width: 500%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-image: url('../assets/background.jpg');
+                background-repeat: repeat-x;
+                background-position: center;
+                background-size: 20% 100%;
+            }
         }
     }
 }
 
 @keyframes slide {
     0% {
-        transform: translate3d(0, 0, 0);
+        transform: translateX(-100%);
     }
     100% {
-        transform: translate3d(-3840px, 0, 0);
+        transform: translateX(-200%);
     }
 }
