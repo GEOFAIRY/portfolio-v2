@@ -1,6 +1,6 @@
 <template>
     <div class="spotify-playing" v-if="!isLoading">
-        <a id="spotify-album-art" :href="spotifyData.album.link">
+        <a id="spotify-album-art" :href=spotifyData.album.link>
             <img :src="spotifyData.album.image" />
         </a>
         <div>
@@ -27,16 +27,57 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from '@vue/runtime-core'
 
 import axios from 'axios'
 
+interface State {
+    spotifyData: SpotifyData
+    isLoading: boolean
+}
+
+interface SpotifyData {
+    album: SpotifyAlbumData
+    artist: SpotifyArtistData
+    track: SpotifyTrackData
+}
+
+interface SpotifyAlbumData {
+    name: string
+    link: string
+    image: string
+}
+
+interface SpotifyArtistData {
+    name: string
+    link: string
+}
+
+interface SpotifyTrackData {
+    name: string
+    link: string
+}
+
 export default defineComponent({
     name: 'Spotify',
-    data() {
+    data: (): State => {
         return {
-            spotifyData: {},
+            spotifyData: {
+                artist: {
+                    name: "",
+                    link: ""
+                },
+                album: {
+                    name: "",
+                    link: "",
+                    image: ""
+                },
+                track: {
+                    name: "",
+                    link: ""
+                }
+            },
             isLoading: true,
         }
     },
