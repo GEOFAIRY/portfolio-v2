@@ -12,9 +12,14 @@
 <script lang="ts">
 import { defineComponent } from '@vue/runtime-core'
 
+interface State {
+    walkClass: string
+    walkFrame: number
+}
+
 export default defineComponent({
     name: 'Heading',
-    data() {
+    data: (): State => {
         return {
             walkClass: '',
             walkFrame: 0,
