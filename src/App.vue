@@ -1,6 +1,6 @@
 <template>
-    <Portfolio />
-    <Spotify/>
+  <Portfolio />
+  <Spotify />
 </template>
 
 <script lang="ts">

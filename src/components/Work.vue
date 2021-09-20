@@ -1,8 +1,6 @@
-<template>
-  <h1>History</h1>
-</template>
+<template />
 
-<script>
+<script lang="ts">
 export default {
 
 }
