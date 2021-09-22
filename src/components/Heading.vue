@@ -66,5 +66,9 @@ export default defineComponent({
     font-size: 24px;
     letter-spacing: 5px;
     font-family: arcade;
+
+    @media screen and (max-width: 700px)  {
+      top: 200px;
+    }
 }
 </style>

@@ -69,7 +69,8 @@ export default defineComponent({
   methods: {
     scrollingWave(event: Event) {
       // Any code to be executed when the window is scrolled
-      this.curveWidth = (1000 - window.pageYOffset) * 10
+      this.curveWidth = (1000 - window.pageYOffset) * 5
+      if (this.curveWidth < 0) this.curveWidth = 0;
     },
     scrollDirection(event: Event) {
 
