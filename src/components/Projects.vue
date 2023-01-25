@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <div class="max-height">
         <a href="https://sunsetdrive.kyranstagg.co.nz/" target="_blank">
             <div class="card">
