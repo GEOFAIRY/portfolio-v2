@@ -8,6 +8,6 @@ import Spotify from './components/Spotify.vue'
   <Spotify />
 </template>
 
-<style scoped>
+<style lang="scss">
 @import './stylesheets/App.scss';
 </style>
