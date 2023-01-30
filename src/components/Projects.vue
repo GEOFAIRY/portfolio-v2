@@ -7,7 +7,11 @@
                     alt="Sunset drive preview"
                     class="sunset-img"
                 />
-                <a class="card-expand" href="https://github.com/GEOFAIRY/sunset-drive" target="_blank">
+                <a
+                    class="card-expand"
+                    href="https://github.com/GEOFAIRY/sunset-drive"
+                    target="_blank"
+                >
                     <img
                         src="../assets/github-mark-white.png"
                         alt="Github Link"
@@ -41,10 +45,14 @@ export default defineComponent({
     padding: 40px 50px;
     text-align: center;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    height: 60vh;
     transition: height 0.5s;
     transition: 0.3s;
     overflow: hidden;
+    height: 70vh;
+
+    @media only screen and (max-width: 600px) {
+        height: 55vh;
+    }
 
     .card-expand {
         display: flex;
@@ -83,14 +91,32 @@ export default defineComponent({
     }
 
     .sunset-img {
-        height: 60vh;
+        width: 35vw;
+        height: 65vh;
+
+        @media only screen and (max-width: 1920px) {
+            width: 60vw;
+        }
+
+        @media only screen and (max-width: 800px) {
+            width: 80vw;
+        }
+
+        @media only screen and (max-width: 600px) {
+            width: 80vw;
+            height: 50vh;
+        }
     }
 
     &:hover {
-        height: 65vh;
+        height: 73vh;
         animation: imgexpand 0.3s;
         transform: translate(-5px, -5px);
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+
+        @media only screen and (max-width: 600px)  {
+            height: 60vh;
+        }
 
         .card-expand {
             animation: fadeIn 0.3s;
