@@ -16,7 +16,7 @@
         </a>
         <a
             class="col"
-            href="https://kyranstagg.co.nz/Kyran-Stagg-Resume-epl.pdf"
+            href="https://kyranstagg.co.nz/Kyran-Stagg-Resume.pdf"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
